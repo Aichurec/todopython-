@@ -9,7 +9,7 @@
     <!-- <link rel="stylesheet" href="./styles/index.css"> -->
     <link rel="stylesheet" href="{% static 'styles/index.css' %}" />
     <!-- <link rel="stylesheet" href=".styles/checkbox.css"> -->
-    <link rel="stylesheet" href="{% static 'styles/checkbox.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/checkbox.css' %}" />
 </head>
 <body>
    <section>
@@ -34,8 +34,10 @@
                <div class="todo_item_footer">
                    <p>07.04.2021 <span>14:09</span></p>
                    <div class="action_buttons">
-                       <img src="./icons/неокр.звезда.jpg">
-                       <img src="./icons/Удалить.jpg">
+                       <!-- <img src="./icons/неокр.звезда.jpg"> -->
+                       <img src="{% static 'icons/неокр.звезда.jpg' %}">
+                       <!-- <img src="./icons/Удалить.jpg"> -->
+                       <img src="{% static 'icons/Удалить.jpg' %}">
                    </div>
                </div>
            </div>
@@ -51,8 +53,10 @@
                <div class="todo_item_footer">
                    <p>07.04.2021 <span>14:28</span></p>
                    <div class="action_buttons">
-                       <img src="./icons/окр. звезда.png">
-                       <img src="./icons/Удалить.jpg">
+                       <!-- <img src="./icons/окр.звезда.png"> -->
+                       <img src="{% static 'icons/окр.звезда.png' %}">
+                       <!-- <img src="./icons/Удалить.jpg"> -->
+                       <img src="{% static 'icons/Удалить.jpg' %}">
 
                    </div>
                </div>

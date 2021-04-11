@@ -14,3 +14,6 @@ def second(request):
 
 def third(request):
     return HttpResponse("This is page test3")
+
+def first(request):
+    return render(request, "index1.html")
