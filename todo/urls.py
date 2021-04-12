@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from main.views import homepage, test, second, third, first, books
+from main.views import *
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -27,6 +27,9 @@ urlpatterns = [
     path("test3", third),
 
     path("index1/", first, name = "first"),
+    path("books/", books, name = "books"),
+
+    path("add-todo/", add_todo, name="add-todo"),
 
     
 
