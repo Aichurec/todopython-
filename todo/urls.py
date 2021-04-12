@@ -30,6 +30,7 @@ urlpatterns = [
     path("books/", books, name = "books"),
 
     path("add-todo/", add_todo, name="add-todo"),
+    path("delete-todo/<id>", delete_todo, name="delete-todo")
 
     
 
