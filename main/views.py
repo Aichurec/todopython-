@@ -1,5 +1,5 @@
 from django.shortcuts import render, HttpResponse
-from .models import ToDo
+from .models import ToDo, Books
 
 def homepage(request):
     return render(request, "index.html")
@@ -17,3 +17,7 @@ def third(request):
 
 def first(request):
     return render(request, "index1.html")
+
+def books(request):
+    return render(request, "books.html")
+
