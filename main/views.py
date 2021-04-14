@@ -21,6 +21,7 @@ def first(request):
 def books(request):
     return render(request, "books.html")
 
+
 def add_todo(request):
     form = request.POST
     text = form["todo_text"]  
@@ -45,7 +46,10 @@ def unmark_todo(request, id):
     todo.save()
     return redirect(test)
 
-
-    
+def close_todo(request, id):
+    todo = ToDo.objects.get(id=id)
+    todo.is_closed = not todo.is_closed
+    todo.save()
+    return redirect(test)
 
 
