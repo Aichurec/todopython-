@@ -19,9 +19,9 @@ def first(request):
     return render(request, "index1.html")
 
 def books(request):
-    return render(request, "books.html")
-
-
+    books = Books.objects.all()
+    return render(request, "books.html", {"books": books})
+    
 def add_todo(request):
     form = request.POST
     text = form["todo_text"]  

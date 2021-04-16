@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,18 +6,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="{% static 'styles/index1.css' %}" />
 </head>
 <body>
     <form method="POST">
-        <input type="text" name="title" placeholder="Заголовок">
-        <input type="text" name="subtitle" placeholder="Подзаголовок">
-        <input type="text" name="description" placeholder="Описание">
-        <input type="number" name="price" placeholder="Цена">
-        <input type="text" name="genre" placeholder="Жанр">
-        <input type="text" name="author" placeholder="Автор">
-        <input type="datetime-local" name="year" placeholder="Год выхода книги">
-        <input type="datetime" name="date" placeholder="Дата добавления на сайт">
+        <h2>Добавить книгу</h2><br><br>
+        <input class="input"
+        type="text" name="title" placeholder="Заголовок"><br><br>
+        <input class="input"
+        type="text" name="subtitle" placeholder="Подзаголовок"><br><br>
+        <input class="input"
+        type="text" name="description" placeholder="Описание"><br><br>
+        <input class="input"
+        type="number" name="price" placeholder="Цена"><br><br>
+        <input class="input"
+        type="text" name="genre" placeholder="Жанр"><br><br>
+        <input class="input"
+        type="text" name="author" placeholder="Автор"><br><br>
+        <input class="input"
+        type="datetime-local" name="year" placeholder="Год выхода книги"><br><br>
+        <button class="button">Добавить</button>
+        
     </form>
 
-</body>
+    </body>
 </html>
