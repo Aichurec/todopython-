@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 
 
 class ToDo(models.Model):
@@ -11,10 +12,14 @@ class ToDo(models.Model):
 class Books(models.Model):
     title = models.CharField(max_length=50)
     subtitle = models.CharField(max_length=50)
-    description = models.TextField(max_length=50)
+    description = models.TextField(max_length=100)
     price = models.IntegerField()
     genre = models.CharField(max_length=50)
     author = models.CharField(max_length=100)
-    year = models.DateField()
+    year = models.DateField(default=timezone.now)
+    date = models.DateTimeField(default=timezone.now)
+
+    def _str_(self):
+        return self.title
     
     

@@ -6,19 +6,25 @@
 }
 
 .input{
-    padding: 12px 5px;
+    padding: 10px 5px;
     font-size: 18px;
     border: solid #0f0011;
-    width: 40%;
+    width: 25%;
     background-color: #CBE6C9; 
     font-style: italic;
     font-weight: bold;
     color: blue;
 }
-.button{
+.create_button{
     border:  1px solid #0f0011;
     font-size: 18px;
     width: 40%;
     color: red;
-    
- }
+     }
+
+ .delete_button{
+    border:  1px solid #0f0011;
+    font-size: 18px;
+    width: 40%;
+    color: red;
+     }

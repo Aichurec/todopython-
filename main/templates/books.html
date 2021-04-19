@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="{% static 'styles/index1.css' %}" />
 </head>
 <body>
-    <form method="POST">
-        <h2>Добавить книгу</h2><br><br>
+    <form action="{% url 'add-book' %}" method ="POST">
+        {% csrf_token %}       
         <input class="input"
         type="text" name="title" placeholder="Заголовок"><br><br>
         <input class="input"
@@ -25,9 +25,17 @@
         type="text" name="author" placeholder="Автор"><br><br>
         <input class="input"
         type="datetime-local" name="year" placeholder="Год выхода книги"><br><br>
-        <button class="button">Добавить</button>
-        
+        <input class="input"
+        type="datetime-local" name="date" placeholder="Год поступления книги"><br><br>
+        <button class="create_button">Добавить</button>
+        <button class="delete_button">Удалить</button>
+       
     </form>
-
-    </body>
+    {% for book in books %}
+        <p>{{ book.title }} - {{ book.author }}</p>
+        <p>{{ book.subtitle }} - {{ book.description }}</p>
+        <p>{{ book.year }} - {{ book.date }}</p>
+        <p>{{ book.price }}</p>
+    {% endfor %}
+</body>
 </html>

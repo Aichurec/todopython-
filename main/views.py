@@ -4,6 +4,8 @@ from .models import ToDo, Books
 def homepage(request):
     return render(request, "index.html")
 
+
+
 def test(request):
     todo_list = ToDo.objects.all()
     return render(request, "test.html", {"todo_list": todo_list})
@@ -52,4 +54,9 @@ def close_todo(request, id):
     todo.save()
     return redirect(test)
 
+def add_book(request):
+    form = request.POST
+    
+    book.save()
+    return redirect(books)
 
