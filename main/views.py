@@ -73,3 +73,9 @@ def delete_book(request, id):
     book = Books.objects.get(id=id)
     book.delete()
     return redirect(books)
+
+def mark_book(request, id)
+    book = Books.objects.get(id=id)
+    book.is_favorite = True
+    book.save()
+    return redirect(books)

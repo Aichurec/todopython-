@@ -18,6 +18,7 @@ class Books(models.Model):
     author = models.CharField(max_length=100)
     year = models.DateField(default=timezone.now)
     date = models.DateTimeField(default=timezone.now)
+    is_favorite = models.BooleanField(default=False)
 
     def _str_(self):
          return self.title
