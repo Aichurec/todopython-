@@ -56,7 +56,20 @@ def close_todo(request, id):
 
 def add_book(request):
     form = request.POST
-    
+    title = form["title"]
+    subtitle = form["subtitle"]
+    description = form["description"]
+    price = form["price"]
+    genre = form["genre"]
+    author = form["author"]
+    year = form["year"][:10]
+    date = form["date"][:10]
+    book = Books(title = form["title"],subtitle = form["subtitle"], description = form["description"],
+    price = form["price"], genre = form["genre"], author = form["author"], year = form["year"][:10], date = form["date"][:10])
     book.save()
     return redirect(books)
 
+def delete_book(request, id):
+    book = Books.objects.get(id=id)
+    book.delete()
+    return redirect(books)

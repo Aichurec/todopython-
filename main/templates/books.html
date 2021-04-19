@@ -28,14 +28,17 @@
         <input class="input"
         type="datetime-local" name="date" placeholder="Год поступления книги"><br><br>
         <button class="create_button">Добавить</button>
-        <button class="delete_button">Удалить</button>
+        <button class="delete_button" href="{% url 'delete-book' book.id %}" >Удалить</button>
        
     </form>
     {% for book in books %}
         <p>{{ book.title }} - {{ book.author }}</p>
         <p>{{ book.subtitle }} - {{ book.description }}</p>
         <p>{{ book.year }} - {{ book.date }}</p>
-        <p>{{ book.price }}</p>
+        <p>{{ book.price }}
+            
+        </p><br><br>
     {% endfor %}
+    
 </body>
 </html>

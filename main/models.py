@@ -20,6 +20,6 @@ class Books(models.Model):
     date = models.DateTimeField(default=timezone.now)
 
     def _str_(self):
-        return self.title
+         return self.title
     
     
